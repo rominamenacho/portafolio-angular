@@ -17,3 +17,4 @@ export interface InfoPagina {
   tublr?: string;
   equipo_trabajo?: any[];
 }
+

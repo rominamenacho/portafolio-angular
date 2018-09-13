@@ -1,3 +1,4 @@
+import { ProductosService } from './services/productos.service';
 import { InfoPaginaService } from './services/info-pagina.service';
 import {HttpClientModule } from '@angular/common/http' ;
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
+import { SearchComponent } from './pages/search/search.component';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { ItemComponent } from './pages/item/item.component';
     FooterComponent,
     PortafolioComponent,
     AboutComponent,
-    ItemComponent
+    ItemComponent,
+    SearchComponent
   ],
   /*aca van los modulos*/
   imports: [
@@ -33,7 +36,7 @@ import { ItemComponent } from './pages/item/item.component';
   /*en la version nueva, ya no es necesario agregar los services
   a providres, basta con poner: providedIn: 'root' en el decorador
   injectable para decirle que se ve desde el root para abajo*/
-  providers: [InfoPaginaService],
+  providers: [InfoPaginaService, ProductosService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
